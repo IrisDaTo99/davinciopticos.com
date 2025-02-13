@@ -1,0 +1,133 @@
+/* Sección de Asesoramiento Personalizado */
+#asesoramiento {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.portada .img-container {
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.portada h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+#asesoramiento .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+#asesoramiento .info {
+    max-width: 55%;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#asesoramiento .info h2 {
+    color: #00aaff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#asesoramiento .additional-image {
+    max-width: 40%;
+    margin-top: 20px;
+}
+
+#asesoramiento .additional-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Agendar cita */
+.cita {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.cita h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cita p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsividad para la sección de asesoramiento personalizado */
+@media (max-width: 768px) {
+    #asesoramiento .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #asesoramiento .info,
+    #asesoramiento .additional-image {
+        max-width: 100%;
+    }
+
+    .cita h2 {
+        font-size: 2rem;
+    }
+
+    .cita p {
+        font-size: 1rem;
+    }
+}
+
+/* Sección de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-icon img {
+        width: 50px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}

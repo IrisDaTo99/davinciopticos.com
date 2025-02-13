@@ -1,0 +1,244 @@
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+header .logo-container img {
+    max-width: 130px;
+    height: auto;
+}
+
+/* Estilo para el menú de navegación */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+/* Estilos para el dropdown */
+nav ul .dropdown {
+    position: relative;
+}
+
+nav ul .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-left: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 999;
+}
+
+nav ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul .dropdown-content li {
+    padding: 10px 15px;
+}
+
+nav ul .dropdown-content a {
+    color: #333;
+    font-size: 1rem;
+}
+
+nav ul .dropdown-content a:hover {
+    color: #00aaff;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+
+    nav ul .dropdown-content li {
+        text-align: center;
+    }
+}
+
+/* Sección de Consulta Oftalmológica */
+#consulta-oftalmologica {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.portada .img-container {
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.portada h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+#consulta-oftalmologica .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+#consulta-oftalmologica .info {
+    max-width: 55%;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#consulta-oftalmologica .info h2 {
+    color: #00aaff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#consulta-oftalmologica .additional-image {
+    max-width: 40%;
+    margin-top: 20px;
+}
+
+#consulta-oftalmologica .additional-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Agendar cita */
+.cita {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.cita h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cita p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsividad para la sección de consulta oftalmológica */
+@media (max-width: 768px) {
+    #consulta-oftalmologica .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #consulta-oftalmologica .info,
+    #consulta-oftalmologica .additional-image {
+        max-width: 100%;
+    }
+
+    .cita h2 {
+        font-size: 2rem;
+    }
+
+    .cita p {
+        font-size: 1rem;
+    }
+}
+
+/* Sección de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-icon img {
+        width: 50px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}

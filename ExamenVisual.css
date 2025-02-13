@@ -1,0 +1,316 @@
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+header .logo-container img {
+    max-width: 140px;
+    height: auto;
+}
+
+/* Estilo para el menú de navegación */
+nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;  /* Necesario para el posicionamiento del dropdown */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;  /* Hace que el enlace ocupe todo el espacio del elemento */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+/* Estilos para el dropdown */
+nav ul .dropdown {
+    position: relative; /* Asegura que el dropdown se posicione correctamente */
+}
+
+nav ul .dropdown-content {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Lo coloca debajo del elemento principal */
+    top: 100%;  /* Justo debajo del item */
+    right: 0%; /* Mueve el contenido del dropdown a la derecha */
+    margin-left: 10px; /* Añade un pequeño espacio a la izquierda */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 160px;  /* Establece un ancho mínimo para el dropdown */
+    z-index: 999;  /* Asegura que esté por encima de otros elementos */
+}
+
+/* Muestra el dropdown al pasar el ratón */
+nav ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo para cada ítem dentro del dropdown */
+nav ul .dropdown-content li {
+    padding: 10px 15px;
+    white-space: nowrap;  /* Evita que los textos se rompan */
+}
+
+nav ul .dropdown-content a {
+    color: #333;
+    font-size: 1rem;
+}
+
+nav ul .dropdown-content a:hover {
+    color: #00aaff;  /* Cambia el color al pasar el ratón */
+}
+
+/* Asegura que el dropdown funcione bien en dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Los enlaces se apilan verticalmente */
+    }
+    
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul .dropdown-content {
+        position: static; /* No lo posicionamos absolutamente en pantallas pequeñas */
+        width: 100%;  /* Asegura que el dropdown ocupe todo el ancho */
+    }
+
+    nav ul .dropdown-content li {
+        text-align: center; /* Centra los ítems del dropdown en pantallas pequeñas */
+    }
+}
+
+/* Sección de Examen Visual */
+#examen-visual {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Imagen de portada */
+.portada .img-container {
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.portada h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+/* Información del examen visual */
+#examen-visual .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: center;
+    padding: 30px;
+}
+
+#examen-visual .info {
+    max-width: 55%;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify; /* Justificar el texto */
+}
+
+#examen-visual .info h2 {
+    color: #00aaff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Imagen adicional con la descripción */
+#examen-visual .additional-image {
+    max-width: 40%;
+    margin-top: 20px;
+}
+
+#examen-visual .additional-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Convenios Institucionales */
+.convenios {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.convenios h2 {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 30px;
+}
+
+.convenios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.info-convenios {
+    max-width: 60%;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.info-convenios p {
+    margin-bottom: 20px;
+}
+
+.info-convenios strong {
+    color: #00aaff;
+}
+
+.convenios-image {
+    max-width: 35%;
+}
+
+.convenios-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Agendar cita */
+/* Estilo para la sección de Cita */
+.cita {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.cita h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cita p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Estilo para la sección de WhatsApp */
+.whatsapp-icon {
+    position: fixed;   /* Se asegura de que el ícono esté fijo en la pantalla */
+    bottom: 20px;      /* Lo coloca 20px desde la parte inferior */
+    right: 20px;       /* Lo coloca 20px desde la parte derecha */
+    z-index: 1000;     /* Asegura que el ícono esté por encima de otros elementos */
+    transition: transform 0.3s ease;  /* Para agregar animación cuando el ratón pasa sobre él */
+}
+
+.whatsapp-icon img {
+    width: 60px;  /* Tamaño del ícono */
+    height: auto;
+    border-radius: 50%; /* Opcional: da una forma circular al ícono */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1); /* Hace que el ícono crezca cuando se pasa el ratón */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-icon img {
+        width: 50px; /* Tamaño ajustado en pantallas pequeñas */
+    }
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .portada h1 {
+        font-size: 2.5rem;
+    }
+
+    #examen-visual .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #examen-visual .info, #examen-visual .additional-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    #examen-visual .info h2 {
+        font-size: 2rem;
+    }
+
+    .convenios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-convenios, .convenios-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .beneficios h2, .cita h2 {
+        font-size: 2rem;
+    }
+}
